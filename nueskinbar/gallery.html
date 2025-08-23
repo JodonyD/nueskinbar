@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Nueskin Bar - Eyelash Extensions & Waxing</title>
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"> <!-- font awesome icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">  <!-- google fonts -->
+    <link rel="stylesheet" href="styleGallery.css">
+    
+</head>
+<body>
+
+    <!-- navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">NUESKIN BAR</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <span class="visually-hidden">Toggle navigation</span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-light rounded-pill px-3" href="booking.html">Book Now</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- hero section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>Our Work</h1>
+            <p>Look through our gorgeous selection of fusion eyelash extensions and waxing.</p>
+        </div>
+    </section>
+
+    <!-- filter section -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="text-center">
+                <button class="btn filter-btn active" data-filter="all" type="button">All Work</button>
+                <button class="btn filter-btn" data-filter="classic" type="button">Classic Lashes</button>
+                <button class="btn filter-btn" data-filter="hybrid" type="button">Hybrid Lashes</button>
+                <button class="btn filter-btn" data-filter="volume" type="button">Volume Lashes</button>
+                <button class="btn filter-btn" data-filter="waxing" type="button">Waxing</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- gallery section -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="row g-4" id="galleryGrid">
+                
+                <!-- Classic Lashes -->
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="classic" data-bs-toggle="modal" data-bs-target="#galleryModal" data-title="Natural Classic Set" data-description="Beautiful natural-looking classic lash extensions that enhance the client's natural eye shape. Perfect for everyday wear with a subtle enhancement that looks effortlessly gorgeous.">
+                    <div class="gallery-image">
+                        <span class="service-tag">Classic</span>
+                        <div>Classic Lash Set<br><small>Natural Look</small></div>
+                    </div>
+                    <div class="gallery-content">
+                        <h5>Natural Classic Set</h5>
+                        <p>Elegant and natural enhancement perfect for everyday wear</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="classic" data-bs-toggle="modal" data-bs-target="#galleryModal" data-title="Dramatic Classic" data-description="Classic lash extensions with longer lengths for a more dramatic effect while maintaining the natural one-to-one application technique. Perfect for special occasions.">
+                    <div class="gallery-image">
+                        <span class="service-tag">Classic</span>
+                        <div>Classic Lash Set<br><small>Dramatic Length</small></div>
+                    </div>
+                    <div class="gallery-content">
+                        <h5>Dramatic Classic</h5>
+                        <p>Classic technique with dramatic length for special occasions</p>
+                    </div>
+                </div>
+
+                <!-- Hybrid Lashes -->
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="hybrid" data-bs-toggle="modal" data-bs-target="#galleryModal" data-title="Textured Hybrid Set" data-description="The perfect blend of classic and volume techniques creating a beautifully textured look. Mix of individual lashes and volume fans for added dimension and fullness.">
+                    <div class="gallery-image">
+                        <span class="service-tag">Hybrid</span>
+                        <div>Hybrid Lash Set<br><small>Textured Look</small></div>
+                    </div>
+                    <div class="gallery-content">
+                        <h5>Textured Hybrid Set</h5>
+                        <p>Perfect blend of classic and volume for beautiful texture</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="hybrid" data-bs-toggle="modal" data-bs-target="#galleryModal" data-title="Wispy Hybrid Look" data-description="Soft, wispy hybrid lashes that create a feathery, romantic look. Combines the best of both classic and volume techniques for a naturally full appearance.">
+                    <div class="gallery-image">
+                        <span class="service-tag">Hybrid</span>
+                        <div>Hybrid Lash Set<br><small>Wispy Style</small></div>
+                    </div>
+                    <div class="gallery-content">
+                        <h5>Wispy Hybrid Look</h5>
+                        <p>Soft, romantic wispy effect with beautiful dimension</p>
+                    </div>
+                </div>
+
+                <!-- Volume Lashes -->
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="volume" data-bs-toggle="modal" data-bs-target="#galleryModal" data-title="Russian Volume Set" data-description="Full, fluffy Russian volume lashes using ultra-fine extensions. Multiple lightweight lashes applied to each natural lash for maximum fullness and glamour.">
+                    <div class="gallery-image">
+                        <span class="service-tag">Volume</span>
+                        <div>Russian Volume Set<br><small>Ultra Full</small></div>
+                    </div>
+                    <div class="gallery-content">
+                        <h5>Russian Volume Set</h5>
+                        <p>Ultra-full and fluffy volume for maximum glamour</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="volume" data-bs-toggle="modal" data-bs-target="#galleryModal" data-title="Mega Volume Glam" data-description="The ultimate in lash volume with mega volume technique. Perfect for clients who want maximum drama and fullness for special events or those who love a bold look.">
+                    <div class="gallery-image">
+                        <span class="service-tag">Volume</span>
+                        <div>Mega Volume Set<br><small>Maximum Drama</small></div>
+                    </div>
+                    <div class="gallery-content">
+                        <h5>Mega Volume Glam</h5>
+                        <p>Maximum drama and fullness for the ultimate glam look</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="volume" data-bs-toggle="modal" data-bs-target="#galleryModal" data-title="Volume Cat Eye" data-description="Sultry cat eye effect using volume technique. Longer lengths towards the outer corners create a lifted, elongated eye shape that's both glamorous and sophisticated.">
+                    <div class="gallery-image">
+                        <span class="service-tag">Volume</span>
+                        <div>Volume Cat Eye<br><small>Sultry Shape</small></div>
+                    </div>
+                    <div class="gallery-content">
+                        <h5>Volume Cat Eye</h5>
+                        <p>Sultry cat eye shape with full volume technique</p>
+                    </div>
+                </div>
+
+                <!-- Waxing -->
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="waxing" data-bs-toggle="modal" data-bs-target="#galleryModal" data-title="Perfect Brow Shape" data-description="Expertly shaped eyebrows using professional waxing techniques. Clean lines and perfect arch to frame and enhance your facial features beautifully.">
+                    <div class="gallery-image">
+                        <span class="service-tag">Waxing</span>
+                        <div>Eyebrow Waxing<br><small>Before/After</small></div>
+                    </div>
+                    <div class="gallery-content">
+                        <h5>Perfect Brow Shape</h5>
+                        <p>Expert eyebrow shaping for perfectly framed eyes</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="waxing" data-bs-toggle="modal" data-bs-target="#galleryModal" data-title="Smooth Results" data-description="Professional waxing services delivering silky smooth results. Our gentle technique and high-quality wax ensure comfortable treatments with long-lasting smoothness.">
+                    <div class="gallery-image">
+                        <span class="service-tag">Waxing</span>
+                        <div>Professional Waxing<br><small>Smooth Results</small></div>
+                    </div>
+                    <div class="gallery-content">
+                        <h5>Smooth Results</h5>
+                        <p>Silky smooth skin with our gentle waxing technique</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+   
+    <!-- modal -->
+    <div class="modal fade" id="galleryModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-image" id="modalImage"></div>
+                <div class="modal-body">
+                    <h4 class="modal-title" id="modalTitle"></h4>
+                    <p id="modalDescription"></p>
+                    <div class="text-center mt-4">
+                        <a href="booking.html" class="btn" style="background: var(--gradient); color: white; border-radius: 50px; padding: 12px 30px;">Book This Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5>NUESKIN BAR</h5>
+                    <p class="mb-4">Your destination for expert eyelash extensions and professional waxing services.</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/nueskinbar/?hl=en" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@nueskinbar" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="booking.html">Book Now</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Services</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Classic Lashes</a></li>
+                        <li><a href="#">Hybrid Lashes</a></li>
+                        <li><a href="#">Volume Lashes</a></li>
+                        <li><a href="#">Waxing Services</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 mb-4">
+                    <h5>Contact Info</h5>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-phone me-2"></i>(555) 123-4567</li>
+                        <li><i class="fas fa-envelope me-2"></i>nueskinbar@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt me-2"></i>Portmore, Jamaica</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="text-center pt-4 border-top border-secondary">
+                <p class="text-white">&copy; 2025 Nueskin Bar. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // filtering for the gallery 
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const filter = button.getAttribute('data-filter');
+                    
+                    // updates active button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    
+                    // filter items
+                    galleryItems.forEach(item => {
+                        const category = item.getAttribute('data-category');
+                        if (filter === 'all' || category === filter) {
+                            item.style.display = 'block';
+                            setTimeout(() => {
+                                item.style.transform = 'scale(1)';
+                                item.style.opacity = '1';
+                            }, 50);
+                        } else {
+                            item.style.transform = 'scale(0.8)';
+                            item.style.opacity = '0';
+                            setTimeout(() => {
+                                item.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+
+            // modal functionality
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const title = this.getAttribute('data-title');
+                    const description = this.getAttribute('data-description');
+                    const imageContent = this.querySelector('.gallery-image div').innerHTML;
+                    
+                    document.getElementById('modalTitle').textContent = title;
+                    document.getElementById('modalDescription').textContent = description;
+                    document.getElementById('modalImage').innerHTML = imageContent;
+                });
+            });
+        });
+    </script>
+</body>
+</html>
