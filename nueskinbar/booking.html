@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Now - NueSkin Bar</title>
+    <title>Book Now | Nueskin Bar - Eyelash Extensions & Waxing</title>
+    <link rel="icon" href="logo.jpg" type="image/jpg">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"> <!-- font awesome icons -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">  <!-- google fonts -->
@@ -52,103 +53,18 @@
                 <p class="mb-0">Thank you for your booking request. We'll contact you within 24 hours to confirm your appointment.</p>
             </div>
 
-            <form class="p-4 p-md-5 rounded-4 shadow-lg bg-light-translucent" id="bookingForm">
-                <div class="mb-5">
-                    <h2 class="h4 text-dark mb-4">Personal Information</h2>
-                    <div class="row g-4">
-                        <div class="col-md-6">
-                            <label for="firstName" class="form-label fw-bold">First Name *</label>
-                            <input type="text" class="form-control form-control-lg rounded-3" id="firstName" name="firstName" required>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="lastName" class="form-label fw-bold">Last Name *</label>
-                            <input type="text" class="form-control form-control-lg rounded-3" id="lastName" name="lastName" required>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="email" class="form-label fw-bold">Email Address *</label>
-                            <input type="email" class="form-control form-control-lg rounded-3" id="email" name="email" required>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="phone" class="form-label fw-bold">Phone Number *</label>
-                            <input type="tel" class="form-control form-control-lg rounded-3" id="phone" name="phone" required>
-                        </div>
-                    </div>
-                </div>
+            <!-- Live Booking (Calendly) -->
+            <div class="card bg-light-translucent border-0 rounded-4 shadow-lg mb-5">
+            <div class="card-body p-0">
+                <h2 class="h4 text-dark px-4 pt-4 mb-3">Instant Booking</h2>
+                <div
+                class="calendly-inline-widget"
+                data-url="https://calendly.com/nueskinbar/hybrid-session"
+                style="min-width:320px;height:800px;"
+                ></div>
+            </div>
+            </div>
 
-                <div class="mb-5">
-                    <label class="form-label fw-bold h4 text-dark mb-4">Select Services *</label>
-                    <div class="row g-3">
-                        <div class="col-6 col-md-3">
-                            <div class="service-option h-100">
-                                <input type="checkbox" class="btn-check" id="classic" name="services" value="Classic Lashes - $80 - 120min">
-                                <label class="service-card btn btn-outline-secondary h-100 p-3 rounded-4" for="classic">
-                                    <h3 class="h6 mb-2 text-dark">Classic Lashes</h3>
-                                    <div class="fw-bold text-pink fs-5">$80</div>
-                                    <div class="text-muted mt-1 small">120 minutes</div>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3">
-                            <div class="service-option h-100">
-                                <input type="checkbox" class="btn-check" id="hybrid" name="services" value="Hybrid Lashes - $100 - 150min">
-                                <label class="service-card btn btn-outline-secondary h-100 p-3 rounded-4" for="hybrid">
-                                    <h3 class="h6 mb-2 text-dark">Hybrid Lashes</h3>
-                                    <div class="fw-bold text-pink fs-5">$100</div>
-                                    <div class="text-muted mt-1 small">150 minutes</div>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3">
-                            <div class="service-option h-100">
-                                <input type="checkbox" class="btn-check" id="volume" name="services" value="Volume Lashes - $120 - 180min">
-                                <label class="service-card btn btn-outline-secondary h-100 p-3 rounded-4" for="volume">
-                                    <h3 class="h6 mb-2 text-dark">Volume Lashes</h3>
-                                    <div class="fw-bold text-pink fs-5">$120</div>
-                                    <div class="text-muted mt-1 small">180 minutes</div>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3">
-                            <div class="service-option h-100">
-                                <input type="checkbox" class="btn-check" id="waxing" name="services" value="Waxing Service - $30-60 - 30-60min">
-                                <label class="service-card btn btn-outline-secondary h-100 p-3 rounded-4" for="waxing">
-                                    <h3 class="h6 mb-2 text-dark">Waxing Service</h3>
-                                    <div class="fw-bold text-pink fs-5">$30-60</div>
-                                    <div class="text-muted mt-1 small">30-60 minutes</div>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mb-5">
-                    <h2 class="h4 text-dark mb-4">Appointment Details</h2>
-                    <div class="row g-4">
-                        <div class="col-md-6">
-                            <label for="date" class="form-label fw-bold">Preferred Date *</label>
-                            <input type="date" class="form-control form-control-lg rounded-3" id="date" name="date" required>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="time" class="form-label fw-bold">Preferred Time *</label>
-                            <select class="form-select form-select-lg rounded-3" id="time" name="time" required>
-                                <option value="">Select Time</option>
-                                <option value="10:00 AM">10:00 AM</option>
-                                <option value="1:00 PM">1:00 PM</option>
-                                <option value="4:00 PM">4:00 PM</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mb-4">
-                    <label for="notes" class="form-label fw-bold">Special Requests or Notes</label>
-                    <textarea class="form-control form-control-lg rounded-3" id="notes" name="notes" rows="4" placeholder="Any allergies, preferences, or special requests..."></textarea>
-                </div>
-
-                <div class="d-grid">
-                    <button type="submit" class="btn btn-primary btn-lg rounded-pill fw-bold submit-btn">Book Appointment</button>
-                </div>
-            </form>
         </div>
     </main>
      <footer class="footer">
@@ -202,56 +118,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-    <script>
-        // Set minimum date to today
-        document.getElementById('date').min = new Date().toISOString().split('T')[0];
+    <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
-        // Handle form submission
-        document.getElementById('bookingForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Collect form data
-            const formData = new FormData(this);
-            const bookingData = {
-                firstName: formData.get('firstName'),
-                lastName: formData.get('lastName'),
-                email: formData.get('email'),
-                phone: formData.get('phone'),
-                services: formData.getAll('services'),
-                date: formData.get('date'),
-                time: formData.get('time'),
-                notes: formData.get('notes'),
-                timestamp: new Date().toISOString()
-            };
-
-            // Validate that at least one service is selected
-            if (bookingData.services.length === 0) {
-                alert('Please select at least one service.');
-                return;
-            }
-
-            // Show success message and hide form
-            const successMessage = document.getElementById('successMessage');
-            const bookingForm = document.getElementById('bookingForm');
-            
-            successMessage.classList.remove('d-none');
-            bookingForm.style.display = 'none';
-            
-            // Scroll to top to show success message
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-
-            // Log data for demonstration
-            console.log('Booking Data:', bookingData);
-            
-            // In a real application, you would send this data to your server here
-            
-            // Reset form after a delay
-            setTimeout(() => {
-                successMessage.classList.add('d-none');
-                bookingForm.style.display = 'block';
-                bookingForm.reset();
-            }, 5000);
-        });
-    </script>
 </body>
 </html>

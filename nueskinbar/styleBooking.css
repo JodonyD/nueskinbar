@@ -272,3 +272,10 @@ body {
         height: 350px;
     }
 }
+
+
+/* Calendly sizing helpers */
+.calendly-inline-widget { min-height: 700px; }
+@media (max-width: 576px) {
+  .calendly-inline-widget { height: 1050px !important; }
+}
