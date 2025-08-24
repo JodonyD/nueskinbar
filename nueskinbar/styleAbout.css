@@ -39,12 +39,16 @@
         
         /* Hero Section */
         .hero-section {
-            background: var(--gradient);
+            background: url('img.jpg');
+            background-size: cover;
+            background-position: center -220px;
+            background-repeat: no-repeat;
             color: white;
             padding: 120px 0 80px;
             text-align: center;
             position: relative;
             overflow: hidden;
+            height: 85vh;
         }
         
         .hero-section::before {
@@ -54,15 +58,16 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400"><circle cx="200" cy="100" r="50" fill="white" opacity="0.1"/><circle cx="800" cy="150" r="80" fill="white" opacity="0.08"/><circle cx="400" cy="300" r="60" fill="white" opacity="0.12"/><path d="M0,350 Q500,250 1000,350 L1000,400 L0,400 Z" fill="white" opacity="0.1"/></svg>');
         }
         
         .hero-section h1 {
             font-size: 3.5rem;
             font-weight: 700;
             margin-bottom: 20px;
+            margin-top: 100px;
             position: relative;
             z-index: 2;
+            color: #000;
         }
         
         .hero-section p {
@@ -70,6 +75,7 @@
             opacity: 0.9;
             position: relative;
             z-index: 2;
+            color: #000;
         }
         
         /* Story Section */
@@ -85,6 +91,7 @@
             margin-bottom: 50px;
             color: var(--dark-color);
             position: relative;
+           
         }
         
         .section-title::after {

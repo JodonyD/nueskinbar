@@ -83,7 +83,7 @@
         content: "";
         position: absolute;
         inset: 0;
-        background: rgba(0, 0, 0, 0.8); /* 0.8 = 80% transparency */
+        background: rgba(0, 0, 0, 0.6); /* 0.8 = 80% transparency */
         z-index: 1;
         }
 
@@ -381,22 +381,69 @@
             animation: fadeInUp 0.8s ease-out;
         }
         
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero-content h1 {
-                font-size: 2.5rem;
-            }
-            
-            .section-title {
-                font-size: 2.2rem;
-            }
-            
-            .service-card {
-                margin-bottom: 30px;
-            }
-        }
-        
-        /* Scroll animations */
-        .aos-animate {
-            animation: fadeInUp 0.8s ease-out;
-        }
+     /* Small devices (phones, portrait) */
+@media (max-width: 576px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    .stat-number {
+        font-size: 2rem;
+    }
+    .team-image {
+        height: 200px;
+    }
+    .cta-content {
+        padding: 20px;
+    }
+    .cta-content h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Medium devices (tablets, landscape phones) */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    .stat-number {
+        font-size: 2.5rem;
+    }
+    .team-image {
+        height: 250px;
+    }
+    .cta-content {
+        padding: 40px 20px;
+    }
+    .cta-content h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Large devices (laptops / small desktops, e.g. MacBook Air/Pro) */
+@media (max-width: 1024px) {
+    .hero-section h1 {
+        font-size: 3rem;
+    }
+    .stat-number {
+        font-size: 3rem;
+    }
+    .team-image {
+        height: 300px;
+    }
+    .cta-content h2 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Extra large devices (big desktops / iMac) */
+@media (min-width: 1200px) {
+    .hero-section h1 {
+        font-size: 4rem;
+    }
+    .stat-number {
+        font-size: 3.5rem;
+    }
+    .team-image {
+        height: 350px;
+    }
+}
