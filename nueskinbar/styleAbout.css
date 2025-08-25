@@ -41,7 +41,7 @@
         .hero-section {
             background: url('img.jpg');
             background-size: cover;
-            background-position: center -220px;
+            background-position: center -90px;
             background-repeat: no-repeat;
             color: white;
             padding: 120px 0 80px;
@@ -349,9 +349,34 @@
             transform: translateY(-3px);
             box-shadow: 0 8px 20px rgba(255, 140, 186, 0.3);
         }
+ /* Small devices (phones, portrait) */
+    @media (max-width: 576px) {
+        .hero-section {
+                background-position: center;
         
-        /* Responsive */
+            }
+        .hero-section h1 {
+            font-size: 2rem;
+        }
+        .stat-number {
+            font-size: 2rem;
+        }
+        .team-image {
+            height: 200px;
+        }
+        .cta-content {
+            padding: 20px;
+        }
+        .cta-content h2 {
+            font-size: 1.5rem;
+        }
+}
+        /* Responsive for mobile */
         @media (max-width: 768px) {
+            .hero-section {
+                background-position: center;
+        
+            }
             .hero-section h1 {
                 font-size: 2.5rem;
             }
@@ -373,3 +398,40 @@
                 font-size: 2rem;
             }
         }
+
+    /* Large devices (laptops / small desktops, e.g. MacBook Air/Pro) */
+    @media (max-width: 1024px) {
+        .hero-section {
+                background-position: center -50px;
+        
+            }
+        .hero-section h1 {
+            font-size: 3rem;
+        }
+        .stat-number {
+            font-size: 3rem;
+        }
+        .team-image {
+            height: 300px;
+        }
+        .cta-content h2 {
+            font-size: 2.5rem;
+        }
+    }
+
+    /* Extra large devices (big desktops / iMac) */
+    @media (min-width: 1200px) {
+        .hero-section {
+                background-position: center -240px;
+        
+            }
+        .hero-section h1 {
+            font-size: 4rem;
+        }
+        .stat-number {
+            font-size: 3.5rem;
+        }
+        .team-image {
+            height: 350px;
+        }
+    }

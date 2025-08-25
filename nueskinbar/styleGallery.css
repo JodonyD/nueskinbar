@@ -123,6 +123,7 @@
         .gallery-image {
             height: 300px;
             background: var(--gradient);
+
             display: flex;
             align-items: center;
             justify-content: center;
