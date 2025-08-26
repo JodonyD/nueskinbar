@@ -111,7 +111,7 @@
         .hero-logo {
         position: absolute;
         right: 5%;
-        top: 50%;
+        top: 55%;
         transform: translateY(-50%);
         width: 500px;           /* adjust the size */
         height: 500px;
@@ -380,70 +380,169 @@
         .fade-in-up {
             animation: fadeInUp 0.8s ease-out;
         }
+    /* Medium devices (tablets, landscape phones) */
+    @media (max-width: 768px) and (min-width: 577px) {
+        .hero-section {
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: flex-start !important;
+            align-items: center !important;
+            text-align: center !important;
+            padding: 40px 20px 60px 20px !important;
+            height: auto !important;
+            min-height: 100vh;
+            
+        }
+
+        .hero-content {
+            text-align: center !important;
+            max-width: 100% !important;
+            margin-bottom: 60px !important; /* Extra space to push logo down from button */
+            order: 1;
+        }
+
+        .hero-logo {
+            position: static !important;
+            margin: 0 auto !important;
+            width: 350px !important;
+            height: 350px !important;
+            margin-top: 12rem !important;
+            order: 2;
+            flex-shrink: 0;
+        }
+
+        .hero-section h1 {
+            font-size: 2.5rem !important;
+            line-height: 1.2 !important;
+            margin-top: 10rem !important;
+        }
         
-     /* Small devices (phones, portrait) */
-@media (max-width: 576px) {
-    .hero-section h1 {
-        font-size: 2rem;
+        .hero-content .lead {
+            font-size: 1.2rem !important;
+            line-height: 1.4 !important;
+            margin-bottom: 2rem !important;
+        }
+        
+        .btn-hero {
+            margin-bottom: 30px !important; /* Extra margin below button */
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+        }
+        .team-image {
+            height: 220px;
+        }
+        .cta-content {
+            padding: 30px 15px;
+        }
+        .cta-content h2 {
+            font-size: 1.8rem;
+        }
     }
-    .stat-number {
-        font-size: 2rem;
-    }
-    .team-image {
-        height: 200px;
-    }
-    .cta-content {
-        padding: 20px;
-    }
-    .cta-content h2 {
-        font-size: 1.5rem;
-    }
-}
 
-/* Medium devices (tablets, landscape phones) */
-@media (max-width: 768px) {
-    .hero-section h1 {
-        font-size: 2.5rem;
-    }
-    .stat-number {
-        font-size: 2.5rem;
-    }
-    .team-image {
-        height: 250px;
-    }
-    .cta-content {
-        padding: 40px 20px;
-    }
-    .cta-content h2 {
-        font-size: 2rem;
-    }
-}
+    /* Small devices (phones, portrait) */
+    @media (max-width: 576px) {
+        .hero-section {
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: flex-start !important;
+            align-items: center !important;
+            text-align: center !important;
+            padding: 40px 20px 60px 20px !important;
+            height: auto !important;
+            min-height: 100vh;
+        }
 
-/* Large devices (laptops / small desktops, e.g. MacBook Air/Pro) */
-@media (max-width: 1024px) {
-    .hero-section h1 {
-        font-size: 3rem;
-    }
-    .stat-number {
-        font-size: 3rem;
-    }
-    .team-image {
-        height: 300px;
-    }
-    .cta-content h2 {
-        font-size: 2.5rem;
-    }
-}
+        .hero-content {
+            text-align: center !important;
+            max-width: 100% !important;
+            margin-bottom: 40px !important;
+            order: 1;
+        }
 
-/* Extra large devices (big desktops / iMac) */
-@media (min-width: 1200px) {
-    .hero-section h1 {
-        font-size: 4rem;
+        .hero-logo {
+            position: static !important;
+            margin: 0 auto !important;
+            width: 250px !important;
+            height: 250px !important;
+            margin-top: 8rem !important;
+            order: 2;
+            flex-shrink: 0;
+        }
+
+        .hero-section h1 {
+            font-size: 2.2rem !important;
+            margin-top: 10rem !important;
+        }
+        
+        .hero-content .lead {
+            font-size: 1.1rem !important;
+            margin-bottom: 2rem !important;
+        }
+        
+        .btn-hero {
+            margin-bottom: 20px !important;
+        }
+        
+        .stat-number {
+            font-size: 1.8rem;
+        }
+        .team-image {
+            height: 180px;
+        }
+        .cta-content {
+            padding: 20px;
+        }
+        .cta-content h2 {
+            font-size: 1.4rem;
+        }
     }
-    .stat-number {
-        font-size: 3.5rem;
+
+    /* Large devices (laptops / small desktops, e.g. MacBook Air/Pro) */
+    @media (max-width: 1024px) {
+        .hero-logo {
+            width: 350px;
+            height: 350px;
+            right: 2%;
+        }
+        
+        .hero-content {
+            max-width: 55%; /* Ensure text doesn't overlap logo */
+        }
+        
+        .hero-section h1 {
+            font-size: 3rem;
+        }
+        .stat-number {
+            font-size: 3rem;
+        }
+        .team-image {
+            height: 300px;
+        }
+        .cta-content h2 {
+            font-size: 2.5rem;
+        }
     }
-    .team-image {
-        height: 350px;
+
+    /* Extra large devices (big desktops / iMac) */
+    @media (min-width: 1200px) {
+        .hero-logo {
+            width: 550px;
+            height: 550px;
+        }
+        
+        .hero-content {
+            max-width: 50%; /* Ensure space for larger logo */
+        }
+        
+        .hero-section h1 {
+            font-size: 4rem;
+        }
+        .stat-number {
+            font-size: 3.5rem;
+        }
+        .team-image {
+            height: 350px;
+        }
     }
-}
