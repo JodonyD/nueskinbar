@@ -6,18 +6,12 @@
     <title>Gallery | Nueskin Bar - Eyelash Extensions & Waxing</title>
     <link rel="icon" href="logo.jpg" type="image/jpg">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"> <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">  <link rel="stylesheet" href="styleGallery.css">
-    
-    <style>
-        .carousel-item img {
-            max-height: 70vh;
-            width: auto;
-            margin: 0 auto;
-        }
-    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styleGallery.css">
 </head>
 <body>
-
+    <!--navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-custom">
         <div class="container">
             <a class="navbar-brand" href="index.html">NUESKIN BAR</a>
@@ -47,6 +41,7 @@
         </div>
     </nav>
 
+    <!--hero section-->
     <section class="hero-section">
         <div class="container">
             <h1>Our Work</h1>
@@ -54,6 +49,7 @@
         </div>
     </section>
 
+    <!--filter section-->
     <section class="filter-section">
         <div class="container">
             <div class="text-center">
@@ -67,158 +63,225 @@
         </div>
     </section>
 
+    <!--gallery section-->
     <section class="gallery-section">
         <div class="container">
             <div class="row g-4" id="galleryGrid">
-                
-                <div class="col-lg-4 col-md-6 gallery-item" data-category="classic" data-bs-toggle="modal" data-bs-target="#galleryModal" data-title="Natural Classic Set" data-description="Beautiful natural-looking classic lash extensions that enhance the client's natural eye shape. Perfect for everyday wear with a subtle enhancement that looks effortlessly gorgeous." data-images='["hybridset1.jpg", "hybridset2.jpg", "hybridset3.jpg"]'>
-                    <div class="gallery-image">
-                        <img src="hybridset1.jpg" alt="Natural Classic Set">
-                        <span class="service-tag">Classic</span>
-                        <div>Classic Lash Set<br><small>Natural Look</small></div>
+            <!--classic sets-->
+               <div class="col-lg-4 col-md-6 gallery-item" data-category="classic" data-title="Natural Classic Set">
+                <div class="gallery-image">
+                    <div id="classicCarousel1" class="carousel slide" data-bs-interval="8000">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="images/classicset.jpg" 
+                                    class="d-block w-100" 
+                                    alt="Classic Lashes Set 1"
+                                    data-description="Beautiful natural-looking classic lash extensions that enhance the client's natural eye shape. Perfect for everyday wear with a subtle enhancement.">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://via.placeholder.com/500x300/FF6B9D/FFFFFF?text=Classic+Set+2" 
+                                    class="d-block w-100" 
+                                    alt="Classic Lashes Set 2"
+                                    data-description="Side angle view showing the natural curl and length. These classic lashes add definition while maintaining a sophisticated, understated look.">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://via.placeholder.com/500x300/E0BBE4/FFFFFF?text=Classic+Set+3" 
+                                    class="d-block w-100" 
+                                    alt="Classic Lashes Set 3"
+                                    data-description="Close-up detail of the precision application. Each lash is individually placed for seamless blending with natural lashes.">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#classicCarousel1" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#classicCarousel1" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
-                    <div class="gallery-content">
-                        <h5>Natural Classic Set</h5>
-                        <p>Elegant and natural enhancement perfect for everyday wear</p>
-                    </div>
+                    <span class="service-tag">Classic</span>
                 </div>
-
-                <div class="col-lg-4 col-md-6 gallery-item" data-category="classic" data-bs-toggle="modal" data-bs-target="#galleryModal" data-title="Dramatic Classic" data-description="Classic lash extensions with longer lengths for a more dramatic effect while maintaining the natural one-to-one application technique. Perfect for special occasions." data-images='["classic_dramatic1.jpg", "classic_dramatic2.jpg"]'>
-                    <div class="gallery-image">
-                        <img src="classic_dramatic1.jpg" alt="Dramatic Classic">
-                        <span class="service-tag">Classic</span>
-                        <div>Classic Lash Set<br><small>Dramatic Length</small></div>
-                    </div>
-                    <div class="gallery-content">
-                        <h5>Dramatic Classic</h5>
-                        <p>Classic technique with dramatic length for special occasions</p>
-                    </div>
+                <div class="gallery-content">
+                    <h5>Classic Set</h5>
+                    <p>Elegant and natural enhancement perfect for everyday wear</p>
                 </div>
+            </div>
 
-                <div class="col-lg-4 col-md-6 gallery-item" data-category="hybrid" data-bs-toggle="modal" data-bs-target="#galleryModal" data-title="Textured Hybrid Set" data-description="The perfect blend of classic and volume techniques creating a beautifully textured look. Mix of individual lashes and volume fans for added dimension and fullness." data-images='["hybridset1.jpg", "hybridset2.jpg", "hybridset3.jpg"]'>
+                <!--hybrid sets-->
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="hybrid" data-title="Textured Hybrid Set" data-description="The perfect blend of classic and volume techniques creating a beautifully textured look. Mix of individual lashes and volume fans for added dimension and fullness.">
                     <div class="gallery-image">
-                        <img src="hybridset1.jpg" alt="Textured Hybrid Set">
+                        <div id="hybridCarousel1" class="carousel slide" data-bs-interval="8000">
+                            <div class="carousel-inner">
+                                 <div class="carousel-item active">
+                                    <img src="images/hybridset1.jpg" class="d-block w-100" alt="Dramatic Classic Lashes 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/hybridset2.jpg" class="d-block w-100" alt="Dramatic Classic Lashes 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/hybridset3.jpg" class="d-block w-100" alt="Dramatic Classic Lashes 2">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#hybridCarousel1" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#hybridCarousel1" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
                         <span class="service-tag">Hybrid</span>
                         <div>Hybrid Lash Set<br><small>Textured Look</small></div>
                     </div>
                     <div class="gallery-content">
-                        <h5>Textured Hybrid Set</h5>
+                        <h5>Hybrid Sets</h5>
                         <p>Perfect blend of classic and volume for beautiful texture</p>
+                        <p>JMD $15,000</p>
                     </div>
-                </div>
+                </div> 
 
-                <div class="col-lg-4 col-md-6 gallery-item" data-category="hybrid" data-bs-toggle="modal" data-bs-target="#galleryModal" data-title="Wispy Hybrid Look" data-description="Soft, wispy hybrid lashes that create a feathery, romantic look. Combines the best of both classic and volume techniques for a naturally full appearance." data-images='["hybrid_wispy1.jpg", "hybrid_wispy2.jpg"]'>
+    
+                <!--volume sets-->
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="volume" data-title="Mega Volume Glam" data-description="The ultimate in lash volume with mega volume technique. Perfect for clients who want maximum drama and fullness for special events or those who love a bold look.">
                     <div class="gallery-image">
-                        <img src="hybrid_wispy1.jpg" alt="Wispy Hybrid Look">
-                        <span class="service-tag">Hybrid</span>
-                        <div>Hybrid Lash Set<br><small>Wispy Style</small></div>
-                    </div>
-                    <div class="gallery-content">
-                        <h5>Wispy Hybrid Look</h5>
-                        <p>Soft, romantic wispy effect with beautiful dimension</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 gallery-item" data-category="volume" data-bs-toggle="modal" data-bs-target="#galleryModal" data-title="Russian Volume Set" data-description="Full, fluffy Russian volume lashes using ultra-fine extensions. Multiple lightweight lashes applied to each natural lash for maximum fullness and glamour." data-images='["volume_russian1.jpg", "volume_russian2.jpg"]'>
-                    <div class="gallery-image">
-                        <img src="volume_russian1.jpg" alt="Russian Volume Set">
+                        <div id="volumeCarousel2" class="carousel slide" data-bs-interval="8000">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="images/volumeset.jpg" class="d-block w-100" alt="Mega Volume Glam 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://via.placeholder.com/500x300/FF8CBA/FFFFFF?text=Mega+Volume+2" class="d-block w-100" alt="Mega Volume Glam 2">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#volumeCarousel2" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#volumeCarousel2" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
                         <span class="service-tag">Volume</span>
-                        <div>Russian Volume Set<br><small>Ultra Full</small></div>
                     </div>
                     <div class="gallery-content">
-                        <h5>Russian Volume Set</h5>
-                        <p>Ultra-full and fluffy volume for maximum glamour</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 gallery-item" data-category="volume" data-bs-toggle="modal" data-bs-target="#galleryModal" data-title="Mega Volume Glam" data-description="The ultimate in lash volume with mega volume technique. Perfect for clients who want maximum drama and fullness for special events or those who love a bold look." data-images='["volume_mega1.jpg", "volume_mega2.jpg"]'>
-                    <div class="gallery-image">
-                        <img src="volume_mega1.jpg" alt="Mega Volume Glam">
-                        <span class="service-tag">Volume</span>
-                        <div>Mega Volume Set<br><small>Maximum Drama</small></div>
-                    </div>
-                    <div class="gallery-content">
-                        <h5>Mega Volume Glam</h5>
+                        <h5>Volume Sets</h5>
                         <p>Maximum drama and fullness for the ultimate glam look</p>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 gallery-item" data-category="volume" data-bs-toggle="modal" data-bs-target="#galleryModal" data-title="Volume Cat Eye" data-description="Sultry cat eye effect using volume technique. Longer lengths towards the outer corners create a lifted, elongated eye shape that's both glamorous and sophisticated." data-images='["volume_cat_eye1.jpg", "volume_cat_eye2.jpg"]'>
-                    <div class="gallery-image">
-                        <img src="volume_cat_eye1.jpg" alt="Volume Cat Eye">
-                        <span class="service-tag">Volume</span>
-                        <div>Volume Cat Eye<br><small>Sultry Shape</small></div>
+                <!--brows section-->
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="brows" data-title="Eyebrows">
+                <div class="gallery-image">
+                    <div id="classicCarousel1" class="carousel slide" data-bs-interval="8000">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="images/browlamandtint.jpg" 
+                                    class="d-block w-100" 
+                                    alt="Classic Lashes Set 1"
+                                    data-description="Beautiful natural-looking eyebrow tint and lamination. Perfect for everyday wear with a subtle enhancement.">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://via.placeholder.com/500x300/FF6B9D/FFFFFF?text=Classic+Set+2" 
+                                    class="d-block w-100" 
+                                    alt="Classic Lashes Set 2"
+                                    data-title=""
+                                    data-description="Side angle view showing the natural curl and length. These classic lashes add definition while maintaining a sophisticated, understated look.">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://via.placeholder.com/500x300/E0BBE4/FFFFFF?text=Classic+Set+3" 
+                                    class="d-block w-100" 
+                                    alt="Classic Lashes Set 3"
+                                    data-description="Close-up detail of the precision application. Each lash is individually placed for seamless blending with natural lashes.">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#classicCarousel1" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#classicCarousel1" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
-                    <div class="gallery-content">
-                        <h5>Volume Cat Eye</h5>
-                        <p>Sultry cat eye shape with full volume technique</p>
-                    </div>
+                    <span class="service-tag">Eyebrows</span>
+                    
                 </div>
-
-                 <div class="col-lg-4 col-md-6 gallery-item" data-category="brows" data-bs-toggle="modal" data-bs-target="#galleryModal" data-title="Perfect Brow Shape" data-description="Expertly shaped eyebrows using professional waxing techniques. Clean lines and perfect arch to frame and enhance your facial features beautifully." data-images='["brows_before_after1.jpg", "brows_before_after2.jpg"]'>
-                    <div class="gallery-image">
-                        <img src="brows_before_after1.jpg" alt="Perfect Brow Shape">
-                        <span class="service-tag">Brows</span>
-                        <div>Eyebrow Waxing<br><small>Before/After</small></div>
-                    </div>
-                    <div class="gallery-content">
-                        <h5>Perfect Brow Shape</h5>
-                        <p>Expert eyebrow shaping for perfectly framed eyes</p>
-                    </div>
+                <div class="gallery-content">
+                    <h5>Eyebrows</h5>
+                    <p>Elegant and natural enhancement perfect for everyday wear</p>
                 </div>
+            </div>
 
-                <div class="col-lg-4 col-md-6 gallery-item" data-category="waxing" data-bs-toggle="modal" data-bs-target="#galleryModal" data-title="Smooth Results" data-description="Professional waxing services delivering silky smooth results. Our gentle technique and high-quality wax ensure comfortable treatments with long-lasting smoothness." data-images='["waxing_smooth_results1.jpg", "waxing_smooth_results2.jpg"]'>
+                <!--waxing section-->
+                <div class="col-lg-4 col-md-6 gallery-item" data-category="waxing" data-title="Smooth Results" data-description="Professional waxing services delivering silky smooth results. Our gentle technique and high-quality wax ensure comfortable treatments with long-lasting smoothness.">
                     <div class="gallery-image">
-                        <img src="waxing_smooth_results1.jpg" alt="Smooth Results">
+                        <div id="waxingCarousel1" class="carousel slide" data-bs-interval="8000">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="https://via.placeholder.com/500x300/E0BBE4/FFFFFF?text=Waxing+Legs" class="d-block w-100" alt="Leg Waxing Results">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://via.placeholder.com/500x300/FF8CBA/FFFFFF?text=Waxing+Arms" class="d-block w-100" alt="Arm Waxing Results">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#waxingCarousel1" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#waxingCarousel1" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
                         <span class="service-tag">Waxing</span>
-                        <div>Professional Waxing<br><small>Smooth Results</small></div>
                     </div>
                     <div class="gallery-content">
                         <h5>Smooth Results</h5>
                         <p>Silky smooth skin with our gentle waxing technique</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="col-lg-4 col-md-6 gallery-item" data-category="waxing" data-bs-toggle="modal" data-bs-target="#galleryModal" data-title="Leg Waxing" data-description="Achieve flawlessly smooth legs with our professional waxing service. Long-lasting results and minimal discomfort." data-images='["waxing_legs1.jpg", "waxing_legs2.jpg"]'>
-                    <div class="gallery-image">
-                        <img src="waxing_legs1.jpg" alt="Leg Waxing">
-                        <span class="service-tag">Waxing</span>
-                        <div>Leg Waxing<br><small>Smooth Legs</small></div>
-                    </div>
-                    <div class="gallery-content">
-                        <h5>Leg Waxing</h5>
-                        <p>Enjoy smooth legs with our expert waxing technique</p>
+    <!--modal section-->
+  <div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content" style="background: rgba(0,0,0,0.9); border: none;">
+            <div class="modal-header border-0" style="background: transparent;">
+                <h5 class="modal-title text-white" id="modalTitle"></h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body position-relative p-0" style="min-height: 80vh;">
+                <!-- Navigation arrows -->
+                <button class="btn position-absolute start-0 top-50 translate-middle-y" id="modalPrevBtn" 
+                        style="z-index: 1000; left: 15px; background: rgba(255,255,255,0.8); border: none; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                    <i class="fas fa-chevron-left" style="color: #333; font-size: 20px;"></i>
+                </button>
+                <button class="btn position-absolute end-0 top-50 translate-middle-y" id="modalNextBtn" 
+                        style="z-index: 1000; right: 15px; background: rgba(255,255,255,0.8); border: none; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                    <i class="fas fa-chevron-right" style="color: #333; font-size: 20px;"></i>
+                </button>
+                
+                <!-- Image container that fills the modal -->
+                <div class="d-flex flex-column justify-content-center align-items-center h-100" style="min-height: 70vh;">
+                    <img id="modalImageContent" src="" alt="Gallery Image" class="img-fluid" 
+                         style="max-height: 70vh; max-width: 100%; object-fit: contain;">
+                    
+                    <!-- Description and button overlay -->
+                    <div class="position-absolute bottom-0 start-0 end-0 text-center p-4" 
+                         style="background: linear-gradient(transparent, rgba(0,0,0,0.8));">
+                        <p id="modalDescription" class="text-white mb-3"></p>
+                        <a href="booking.html" class="btn" style="background: var(--gradient); color: white; border-radius: 50px; padding: 12px 30px;">Book This Service</a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    
-    <div class="modal fade" id="galleryModal" tabindex="-1">
-      <div class="modal-dialog modal-xl modal-dialog-centered">
-        <div class="modal-content">
-          <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner" id="carouselInner">
-              </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev" title="Previous Slide">
-              <span class="carousel-control-prev-icon"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next" title="Next Slide">
-              <span class="carousel-control-next-icon"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-          <div class="modal-body text-center">
-            <h4 class="modal-title" id="modalTitle"></h4>
-            <p id="modalDescription"></p>
-            <div class="mt-4">
-              <a href="booking.html" class="btn book-service-btn">Book This Service</a>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
+</div>
 
     <footer class="footer">
         <div class="container">
@@ -261,79 +324,156 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     
-    <script>
-        // filtering for gallery
-        document.addEventListener('DOMContentLoaded', function() {
-            const filterButtons = document.querySelectorAll('.filter-btn');
-            const galleryItems = document.querySelectorAll('.gallery-item');
+   <script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Pause all carousels on hover
+    const carousels = document.querySelectorAll('.carousel');
+    carousels.forEach(carousel => {
+        carousel.addEventListener('mouseenter', function() {
+            const bootstrapCarousel = new bootstrap.Carousel(this);
+            bootstrapCarousel.pause();
+        });
+        
+        carousel.addEventListener('mouseleave', function() {
+            const bootstrapCarousel = new bootstrap.Carousel(this);
+            bootstrapCarousel.cycle();
+        });
+    });
 
-            filterButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    const filter = button.getAttribute('data-filter');
-                    
-                    // Update active button
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    button.classList.add('active');
-                    
-                    // Filter items
-                    galleryItems.forEach(item => {
-                        const category = item.getAttribute('data-category');
-                        if (filter === 'all' || category === filter) {
-                            item.style.display = 'block';
-                            setTimeout(() => {
-                                item.style.transform = 'scale(1)';
-                                item.style.opacity = '1';
-                            }, 50);
-                        } else {
-                            item.style.transform = 'scale(0.8)';
-                            item.style.opacity = '0';
-                            setTimeout(() => {
-                                item.style.display = 'none';
-                            }, 300);
-                        }
-                    });
-                });
-            });
+    // filtering for gallery 
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
 
-            // Modal functionality
-            const galleryModal = document.getElementById('galleryModal');
-            galleryModal.addEventListener('show.bs.modal', function(event) {
-                const button = event.relatedTarget;
-                const images = JSON.parse(button.getAttribute('data-images'));
-                const title = button.getAttribute('data-title');
-                const description = button.getAttribute('data-description');
-                
-                const carouselInner = document.getElementById('carouselInner');
-                carouselInner.innerHTML = ''; // Clear previous slides
-
-                images.forEach((image, index) => {
-                    const carouselItem = document.createElement('div');
-                    carouselItem.className = `carousel-item${index === 0 ? ' active' : ''}`;
-                    
-                    const img = document.createElement('img');
-                    img.src = image;
-                    img.className = 'd-block w-100';
-                    img.alt = title;
-
-                    carouselItem.appendChild(img);
-                    carouselInner.appendChild(carouselItem);
-                });
-
-                document.getElementById('modalTitle').textContent = title;
-                document.getElementById('modalDescription').textContent = description;
-
-                // Toggle carousel controls visibility
-                const prevControl = document.querySelector('#galleryCarousel .carousel-control-prev');
-                const nextControl = document.querySelector('#galleryCarousel .carousel-control-next');
-                if (images.length > 1) {
-                    prevControl.style.display = 'block';
-                    nextControl.style.display = 'block';
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const filter = button.getAttribute('data-filter');
+            
+            // Update active button
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            
+            // Filter items
+            galleryItems.forEach(item => {
+                const category = item.getAttribute('data-category');
+                if (filter === 'all' || category === filter) {
+                    item.style.display = 'block';
+                    setTimeout(() => {
+                        item.style.transform = 'scale(1)';
+                        item.style.opacity = '1';
+                    }, 50);
                 } else {
-                    prevControl.style.display = 'none';
-                    nextControl.style.display = 'none';
+                    item.style.transform = 'scale(0.8)';
+                    item.style.opacity = '0';
+                    setTimeout(() => {
+                        item.style.display = 'none';
+                    }, 300);
                 }
             });
         });
-    </script>
+    });
+
+    // Enhanced Modal functionality with navigation
+    const galleryModal = new bootstrap.Modal(document.getElementById('galleryModal'));
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDescription = document.getElementById('modalDescription');
+    const modalImageContent = document.getElementById('modalImageContent');
+    const modalPrevBtn = document.getElementById('modalPrevBtn');
+    const modalNextBtn = document.getElementById('modalNextBtn');
+    
+    let currentImageIndex = 0;
+    let currentCarouselImages = [];
+    let currentGalleryItem = null;
+
+    // Function to collect all images from a gallery item
+    function getImagesFromGalleryItem(galleryItem) {
+        const carouselImages = galleryItem.querySelectorAll('.carousel-item img');
+        return Array.from(carouselImages);
+    }
+
+    // Function to update modal content
+    function updateModalContent(index) {
+        if (currentCarouselImages.length === 0) return;
+        
+        const img = currentCarouselImages[index];
+        const imageUrl = img.getAttribute('src');
+        const title = currentGalleryItem.getAttribute('data-title');
+        // Get individual image description from the img element
+        const description = img.getAttribute('data-description') || 'No description available';
+
+        modalTitle.textContent = title;
+        modalDescription.textContent = description;
+        modalImageContent.setAttribute('src', imageUrl);
+
+        // Update button visibility - always show arrows if multiple images
+        modalPrevBtn.style.display = currentCarouselImages.length > 1 ? 'flex' : 'none';
+        modalNextBtn.style.display = currentCarouselImages.length > 1 ? 'flex' : 'none';
+        
+        // Add hover effects for better visibility
+        modalPrevBtn.style.opacity = '0.8';
+        modalNextBtn.style.opacity = '0.8';
+    }
+
+    // Navigation functions
+    function showPreviousImage() {
+        currentImageIndex = currentImageIndex > 0 ? currentImageIndex - 1 : currentCarouselImages.length - 1;
+        updateModalContent(currentImageIndex);
+    }
+
+    function showNextImage() {
+        currentImageIndex = currentImageIndex < currentCarouselImages.length - 1 ? currentImageIndex + 1 : 0;
+        updateModalContent(currentImageIndex);
+    }
+
+    // Event listeners for navigation buttons
+    modalPrevBtn.addEventListener('click', showPreviousImage);
+    modalNextBtn.addEventListener('click', showNextImage);
+
+    // Keyboard navigation
+    document.addEventListener('keydown', function(event) {
+        if (galleryModal._isShown) {
+            if (event.key === 'ArrowLeft') {
+                event.preventDefault();
+                showPreviousImage();
+            } else if (event.key === 'ArrowRight') {
+                event.preventDefault();
+                showNextImage();
+            } else if (event.key === 'Escape') {
+                galleryModal.hide();
+            }
+        }
+    });
+
+    // Click handlers for gallery images
+    galleryItems.forEach(item => {
+        const carouselsInItem = item.querySelectorAll('.carousel');
+        carouselsInItem.forEach(carousel => {
+            const carouselImages = carousel.querySelectorAll('.carousel-item img');
+
+            carouselImages.forEach((img, index) => {
+                img.addEventListener('click', function(event) {
+                    event.stopPropagation();
+
+                    currentGalleryItem = this.closest('.gallery-item');
+                    currentCarouselImages = getImagesFromGalleryItem(currentGalleryItem);
+                    currentImageIndex = Array.from(currentCarouselImages).indexOf(this);
+
+                    updateModalContent(currentImageIndex);
+                    galleryModal.show();
+                });
+            });
+        });
+    });
+
+    // Prevent modal from closing if navigation buttons are clicked
+    document.getElementById('galleryModal').addEventListener('click', function(event) {
+        if (event.target.closest('.carousel-control-prev') || 
+            event.target.closest('.carousel-control-next') ||
+            event.target.closest('#modalPrevBtn') ||
+            event.target.closest('#modalNextBtn')) {
+            event.stopPropagation();
+        }
+    });
+});
+</script>
 </body>
 </html>

@@ -6,9 +6,23 @@
     <title>Book Now | Nueskin Bar - Eyelash Extensions & Waxing</title>
     <link rel="icon" href="logo.jpg" type="image/jpg">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"> <!-- font awesome icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">  <!-- google fonts -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styleBooking.css">
+    <style>
+        /* Custom styles for black text and borders */
+        .service-btn {
+            border-color: #000000 !important;
+            color: #000000 !important;
+        }
+        .service-btn:hover {
+            background-color: #000000 !important;
+            color: #ffffff !important;
+        }
+        .text-black {
+            color: #000000 !important;
+        }
+    </style>
 </head>
 <body>
     <!-- navigation -->
@@ -25,7 +39,7 @@
                         <a class="nav-link " href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="about.html">About</a>
+                        <a class="nav-link " href="about.html">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="gallery.html">Gallery</a>
@@ -34,7 +48,7 @@
                         <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link btn btn-outline-light rounded-pill px-3" href="booking.html">Book Now</a>
+                        <a class="nav-link active" href="booking.html">Book Now</a>
                     </li>
                 </ul>
             </div>
@@ -53,17 +67,174 @@
                 <p class="mb-0">Thank you for your booking request. We'll contact you within 24 hours to confirm your appointment.</p>
             </div>
 
-            <!-- Live Booking (Calendly) -->
+            <!-- Cal.com Integration -->
             <div class="card bg-light-translucent border-0 rounded-4 shadow-lg mb-5">
-            <div class="card-body p-0">
-                <h2 class="h4 text-dark px-4 pt-4 mb-3 text-center">Book Now</h2>
-                <div class="calendly-inline-widget" data-url="https://calendly.com/nueskinbar/book-sessions" style="min-width:320px;height:800px;"></div>
-            </div>
+                <div class="card-body p-0">
+                    <h2 class="h4 text-black px-4 pt-4 mb-3 text-center">Choose Your Service</h2>
+                    
+                    <!-- Service Selection Buttons -->
+                    <div class="row px-4 pb-3">
+                        <div class="col-lg-6 col-md-6 mb-3">
+                            <button 
+                                data-cal-link="jrdwebcreations/megs-volume"
+                                class="btn btn-outline-dark w-100 py-3 service-btn">
+                                <i class="fas fa-eye me-2"></i>
+                                <strong>Mega Volume</strong><br>
+                                <small>150m • JMD $15,000</small>
+                            </button>
+                        </div>
+                        <div class="col-lg-6 col-md-6 mb-3">
+                            <button 
+                                data-cal-link="jrdwebcreations/volume"
+                                class="btn btn-outline-dark w-100 py-3 service-btn">
+                                <i class="fas fa-star me-2"></i>
+                                <strong>Volume</strong><br>
+                                <small>120m</small>
+                            </button>
+                        </div>
+                        <div class="col-lg-6 col-md-6 mb-3">
+                            <button 
+                                data-cal-link="jrdwebcreations/hybrid"
+                                class="btn btn-outline-dark w-100 py-3 service-btn">
+                                <i class="fas fa-magic me-2"></i>
+                                <strong>Hybrid</strong><br>
+                                <small>Classic + Volume Combo</small>
+                            </button>
+                        </div>
+                        <div class="col-lg-6 col-md-6 mb-3">
+                            <button 
+                                data-cal-link="jrdwebcreations/lash-removal"
+                                class="btn btn-outline-dark w-100 py-3 service-btn">
+                                <i class="fas fa-eraser me-2"></i>
+                                <strong>Lash Removal</strong><br>
+                                <small>30m • JMD $2,000</small>
+                            </button>
+                        </div>
+                        <div class="col-lg-12 mb-3">
+                            <button 
+                                data-cal-link="jrdwebcreations/bottom-lashes"
+                                class="btn btn-outline-dark w-100 py-3 service-btn">
+                                <i class="fas fa-eye-slash me-2"></i>
+                                <strong>Bottom Lashes</strong><br>
+                                <small>20m • $2,500</small>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Booking Calendar Container -->
+                    <div id="cal-inline" style="width:100%;height:600px;overflow:scroll;display:none;"></div>
+                </div>
             </div>
 
+            <!-- Service Information Card -->
+            <div class="row mt-5">
+                <div class="col-md-4 mb-4">
+                    <div class="card bg-light-translucent border-0 rounded-4 shadow-sm h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-eye fa-2x text-black mb-3"></i>
+                            <h5 class="text-black">Eyelash Extensions</h5>
+                            <p class="text-black small">Classic, Volume, Hybrid styles available</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card bg-light-translucent border-0 rounded-4 shadow-sm h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-spa fa-2x text-black mb-3"></i>
+                            <h5 class="text-black">Waxing Services</h5>
+                            <p class="text-black small">Professional hair removal treatments</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card bg-light-translucent border-0 rounded-4 shadow-sm h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-clock fa-2x text-black mb-3"></i>
+                            <h5 class="text-black">Flexible Timing</h5>
+                            <p class="text-black small">Book appointments that fit your schedule</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Payment Information Modal -->
+            <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header bg-dark text-white">
+                            <h5 class="modal-title" id="paymentModalLabel">
+                                <i class="fas fa-credit-card me-2"></i>Complete Your Payment
+                            </h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="text-center mb-4">
+                                <i class="fas fa-calendar-check fa-3x text-success mb-3"></i>
+                                <h4 class="text-black">Booking Confirmed!</h4>
+                                <p class="text-muted">Please complete your payment to secure your appointment</p>
+                            </div>
+
+                            <!-- Banking Information -->
+                            <div class="card bg-light border-0 rounded-3 mb-4">
+                                <div class="card-body">
+                                    <h5 class="text-black mb-3">
+                                        <i class="fas fa-university me-2"></i>Banking Details
+                                    </h5>
+                                    
+                                    <div class="row">
+                                        <div class="col-sm-4 fw-bold text-black">Bank:</div>
+                                        <div class="col-sm-8 text-black" id="bankName">NCB (National Commercial Bank)</div>
+                                    </div>
+                                    <hr class="my-2">
+                                    
+                                    <div class="row">
+                                        <div class="col-sm-4 fw-bold text-black">Account Name:</div>
+                                        <div class="col-sm-8 text-black" id="accountName">Nueskin Bar</div>
+                                    </div>
+                                    <hr class="my-2">
+                                    
+                                    <div class="row">
+                                        <div class="col-sm-4 fw-bold text-black">Account #:</div>
+                                        <div class="col-sm-8 text-black" id="accountNumber">123-456-7890</div>
+                                    </div>
+                                    <hr class="my-2">
+                                    
+                                    <div class="row">
+                                        <div class="col-sm-4 fw-bold text-black">Amount:</div>
+                                        <div class="col-sm-8 text-black fw-bold" id="paymentAmount">Will be updated based on service</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- WhatsApp Instructions -->
+                            <div class="alert alert-success text-center">
+                                <h5 class="fw-bold mb-3">
+                                    <i class="fab fa-whatsapp me-2"></i>Send Receipt to WhatsApp
+                                </h5>
+                                <p class="mb-3">After making your payment, please send your receipt to:</p>
+                                <h4 class="fw-bold text-success mb-3">(876) 527-8022</h4>
+                                <button class="btn btn-outline-success copy-btn" data-copy="whatsapp">
+                                    <i class="fas fa-copy me-2"></i>Copy WhatsApp Number
+                                </button>
+                            </div>
+
+                            <!-- Copy Button -->
+                            <div class="text-center">
+                                <button class="btn btn-outline-dark copy-btn" data-copy="bankDetails">
+                                    <i class="fas fa-copy me-2"></i>Copy Banking Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
-     <footer class="footer">
+
+    <footer class="footer">
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 mb-4">
@@ -86,12 +257,11 @@
                     </ul>
                 </div>
                 
-                
                 <div class="col-lg-3 mb-4">
                     <h5>Contact Info</h5>
                     <ul class="footer-links">
                         <li><i class="fas fa-phone me-2"></i>(876)527-8022</li>
-                        <li><i class="fas fa-envelope me-2"></i>nueskinbar@gmial.com</li>
+                        <li><i class="fas fa-envelope me-2"></i>nueskinbar@gmail.com</li>
                         <li><i class="fas fa-map-marker-alt me-2"></i>Portmore, Jamaica</li>
                     </ul>
                 </div>
@@ -103,9 +273,139 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Cal.com Embed Script -->
+    <script>
+        (function (C, A, L) { 
+            let p = function (a, ar) { 
+                a.q.push(ar); 
+            }; 
+            let d = C.document; 
+            C.Cal = C.Cal || function () { 
+                let cal = C.Cal; 
+                let ar = arguments; 
+                if (!cal.loaded) { 
+                    cal.ns = {}; 
+                    cal.q = cal.q || []; 
+                    d.head.appendChild(d.createElement("script")).src = A; 
+                    cal.loaded = true; 
+                } 
+                if (ar[0] === L) { 
+                    const api = function () { 
+                        p(api, arguments); 
+                    }; 
+                    const namespace = ar[1]; 
+                    api.q = api.q || []; 
+                    typeof namespace === "string" ? (cal.ns[namespace] = api) && p(api, ar) : p(api, ar); 
+                    return; 
+                } 
+                p(cal, ar); 
+            }; 
+        })(window, "https://app.cal.com/embed/embed.js", "init");
+        
+        // Initialize Cal.com
+        Cal("init", {origin:"https://cal.com"});
+        
+        // Service pricing map
+        const servicePricing = {
+            'jrdwebcreations/megs-volume': 'JMD $15,000',
+            'jrdwebcreations/volume': 'Contact for pricing',
+            'jrdwebcreations/hybrid': 'Contact for pricing', 
+            'jrdwebcreations/lash-removal': 'JMD $2,000',
+            'jrdwebcreations/bottom-lashes': '$2,500'
+        };
+        
+        // Service button click handlers
+        document.querySelectorAll('.service-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const calLink = this.getAttribute('data-cal-link');
+                const calContainer = document.getElementById('cal-inline');
+                
+                // Store selected service for payment modal
+                window.selectedService = calLink;
+                window.selectedServicePrice = servicePricing[calLink] || 'Contact for pricing';
+                
+                // Show the calendar container
+                calContainer.style.display = 'block';
+                calContainer.scrollIntoView({ behavior: 'smooth' });
+                
+                // Load the specific service booking calendar
+                Cal("inline", {
+                    elementOrSelector:"#cal-inline",
+                    calLink: calLink,
+                    layout: "month_view",
+                    config: {
+                        theme: "light"
+                    }
+                });
+            });
+        });
 
-    <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        // Listen for Cal.com booking events
+        Cal("on", {
+            action: "bookingSuccessful",
+            callback: function(e) {
+                // Show payment modal when booking is successful
+                setTimeout(function() {
+                    // Update payment amount in modal
+                    document.getElementById('paymentAmount').textContent = window.selectedServicePrice || 'Contact for pricing';
+                    
+                    // Show the payment modal
+                    const paymentModal = new bootstrap.Modal(document.getElementById('paymentModal'));
+                    paymentModal.show();
+                    
+                    // Add event listener for when modal is closed
+                    document.getElementById('paymentModal').addEventListener('hidden.bs.modal', function () {
+                        // Hide the calendar container
+                        document.getElementById('cal-inline').style.display = 'none';
+                        
+                        // Clear the calendar content
+                        document.getElementById('cal-inline').innerHTML = '';
+                        
+                        // Scroll back to top of page (navbar area)
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }, { once: true }); // Only run once per modal show
+                    
+                }, 1000); // Small delay to ensure booking process completes
+            }
+        });
 
+        // Copy functionality
+        document.querySelectorAll('.copy-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const copyType = this.getAttribute('data-copy');
+                let textToCopy = '';
+                
+                if (copyType === 'bankDetails') {
+                    textToCopy = `Bank: NCB (National Commercial Bank)
+Account Name: Nueskin Bar
+Account #: 123-456-7890
+Amount: ${window.selectedServicePrice || 'Contact for pricing'}`;
+                } else if (copyType === 'whatsapp') {
+                    textToCopy = '(876) 527-8022';
+                }
+                
+                navigator.clipboard.writeText(textToCopy).then(() => {
+                    // Change button text temporarily
+                    const originalText = this.innerHTML;
+                    this.innerHTML = '<i class="fas fa-check me-2"></i>Copied!';
+                    this.classList.add('btn-success');
+                    
+                    setTimeout(() => {
+                        this.innerHTML = originalText;
+                        this.classList.remove('btn-success');
+                    }, 2000);
+                });
+            });
+        });
+
+        // Default popup configuration
+        Cal("ui", {
+            "styles":{"branding":{"brandColor":"#000000"}},
+            "hideEventTypeDetails":false,
+            "layout":"month_view"
+        });
+    </script>
 </body>
 </html>
