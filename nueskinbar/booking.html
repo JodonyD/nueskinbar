@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Now | Nueskin Bar - Eyelash Extensions & Waxing</title>
-    <link rel="icon" href="logo.jpg" type="image/jpg">
+    <link rel="icon" href="images/logo.jpg" type="image/jpg">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -126,37 +126,7 @@
                 </div>
             </div>
 
-            <!-- Service Information Card -->
-            <div class="row mt-5">
-                <div class="col-md-4 mb-4">
-                    <div class="card bg-light-translucent border-0 rounded-4 shadow-sm h-100">
-                        <div class="card-body text-center">
-                            <i class="fas fa-eye fa-2x text-black mb-3"></i>
-                            <h5 class="text-black">Eyelash Extensions</h5>
-                            <p class="text-black small">Classic, Volume, Hybrid styles available</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card bg-light-translucent border-0 rounded-4 shadow-sm h-100">
-                        <div class="card-body text-center">
-                            <i class="fas fa-spa fa-2x text-black mb-3"></i>
-                            <h5 class="text-black">Waxing Services</h5>
-                            <p class="text-black small">Professional hair removal treatments</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card bg-light-translucent border-0 rounded-4 shadow-sm h-100">
-                        <div class="card-body text-center">
-                            <i class="fas fa-clock fa-2x text-black mb-3"></i>
-                            <h5 class="text-black">Flexible Timing</h5>
-                            <p class="text-black small">Book appointments that fit your schedule</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+           
             <!-- Payment Information Modal -->
             <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
@@ -241,8 +211,8 @@
                     <h5>NUESKIN BAR</h5>
                     <p class="mb-4">Your destination for expert eyelash extensions and professional brows and waxing services. Enhancing natural beauty with passion and precision.</p>
                     <div class="social-icons">
-                        <a href="https://www.instagram.com/nueskinbar/?hl=en" title="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.tiktok.com/@nueskinbar" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.instagram.com/nueskinbar/?hl=en" rel="noopener" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@nueskinbar" rel="noopener" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
                 
@@ -343,33 +313,41 @@
         });
 
         // Listen for Cal.com booking events
-        Cal("on", {
-            action: "bookingSuccessful",
-            callback: function(e) {
-                // Show payment modal when booking is successful
-                setTimeout(function() {
-                    // Update payment amount in modal
-                    document.getElementById('paymentAmount').textContent = window.selectedServicePrice || 'Contact for pricing';
-                    
-                    // Show the payment modal
-                    const paymentModal = new bootstrap.Modal(document.getElementById('paymentModal'));
-                    paymentModal.show();
-                    
-                    // Add event listener for when modal is closed
-                    document.getElementById('paymentModal').addEventListener('hidden.bs.modal', function () {
-                        // Hide the calendar container
-                        document.getElementById('cal-inline').style.display = 'none';
-                        
-                        // Clear the calendar content
-                        document.getElementById('cal-inline').innerHTML = '';
-                        
-                        // Scroll back to top of page (navbar area)
-                        window.scrollTo({ top: 0, behavior: 'smooth' });
-                    }, { once: true }); // Only run once per modal show
-                    
-                }, 1000); // Small delay to ensure booking process completes
-            }
-        });
+        // Listen for Cal.com booking events
+Cal("on", {
+    action: "bookingSuccessful",
+    callback: function(e) {
+        // Show payment modal when booking is successful
+        setTimeout(function() {
+            // Update payment amount in modal
+            document.getElementById('paymentAmount').textContent = window.selectedServicePrice || 'Contact for pricing';
+            
+            // Show the payment modal
+            const paymentModal = new bootstrap.Modal(document.getElementById('paymentModal'));
+            paymentModal.show();
+            
+            // Add event listener for when modal is closed
+            document.getElementById('paymentModal').addEventListener('hidden.bs.modal', function () {
+                // Hide the calendar container
+                document.getElementById('cal-inline').style.display = 'none';
+                
+                // Clear the calendar content
+                document.getElementById('cal-inline').innerHTML = '';
+                
+                // FIX: Remove the modal-open class to enable scrolling again
+                document.body.classList.remove('modal-open');
+                
+                // FIX: Also ensure the style attributes are cleared (fallback)
+                document.body.style.overflow = '';
+                document.body.style.paddingRight = '';
+
+                // Scroll back to top of page (navbar area)
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }, { once: true }); // Only run once per modal show
+            
+        }, 1000); // Small delay to ensure booking process completes
+    }
+});
 
         // Copy functionality
         document.querySelectorAll('.copy-btn').forEach(button => {
@@ -379,12 +357,12 @@
                 
                 if (copyType === 'bankDetails') {
                     textToCopy = `Bank: NCB (National Commercial Bank)
-Account Name: Nueskin Bar
-Account #: 123-456-7890
-Amount: ${window.selectedServicePrice || 'Contact for pricing'}`;
-                } else if (copyType === 'whatsapp') {
-                    textToCopy = '(876) 527-8022';
-                }
+                    Account Name: Nueskin Bar
+                    Account #: 123-456-7890
+                    Amount: ${window.selectedServicePrice || 'Contact for pricing'}`;
+                        } else if (copyType === 'whatsapp') {
+                          textToCopy = '(876) 527-8022';
+                        }
                 
                 navigator.clipboard.writeText(textToCopy).then(() => {
                     // Change button text temporarily
